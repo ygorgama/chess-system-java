@@ -38,6 +38,10 @@ public class UI {
 			throw new InputMismatchException("Error rading ChessPosition. valid values are from a1 to h8");
 		}
 	}
+	public static void clearCreen() {
+		System.out.print("\033[H\033[2J");
+		System.out.flush();
+	}
 	
 	public static void printBoard(ChessPiece[][] pieces) {
 		for (int i = 0; i < pieces.length; i++) {
@@ -49,6 +53,7 @@ public class UI {
 		}
 		System.out.println("  a b c d e f g h");
 	}
+	
 	
 	public static void printPiece(ChessPiece piece) {
 		if(piece == null) {
